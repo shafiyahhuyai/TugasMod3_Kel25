@@ -29,11 +29,19 @@ function App() {
     "flex-direction": "column",
     "align-content": "center",}}>
       <Kelompok />
-      {data.map((item,i) => {
+      <div style={{display: "flex",
+    "flex-wrap": "wrap",
+    "flex-direction": "row",
+    alignContent: "center",
+    justifyContent: 'space-evenly'}}> 
+        {data.map((item,i) => {
         return(
           <Card data={item} key={i} />
         )
       })}
+
+      </div>
+     
     </div>
   );
 }
